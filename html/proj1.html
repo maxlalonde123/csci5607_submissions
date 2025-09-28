@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSCI5607 project 1 submission</title>
+</head>
+
+<body id="body">
+    <video controls autoplay loop muted src="../data/proj1_data/csci5607_proj1_demo.mp4" alt="Project 1 video demo" width="1200" height="640"></video>
+    <br>
+    <p>
+        This was a tough project but I think I was able to get the requirements done correctly. One pain in the butt bug I had to deal with was with the translation feature.<br>
+        My method was to check if the vector from the origin of the square to where I clocked intersected with any of the edges. If they didn't intersect I knew I was clicking<br>
+        inside the square and that do_translate should be set to true. The problem was that seemingly randomly, the square would sometimes move when I was clicking outside of the<br>
+        square. The problem ended up being a floating point precision bug. When I was clicking outside of the square it would sometime register inside the square because coordinate<br>
+        values that should have been equal were actually registering as unequal causing errors. Other difficulties I encountered included figuring out how to get GL to not display<br>
+        the texture upside down, adjusting the brightness, and adjusting the brightness by pressing a button.
+    </p>
+    <a href="../data/proj1_data/proj1.zip" download> Zip containing source code</a>
+    <br>
+    <a href="../index.html"> Main page</a>
+</html>
